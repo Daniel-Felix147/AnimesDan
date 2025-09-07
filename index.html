@@ -26,8 +26,8 @@
                 <li><a href="contato.html">Contato</a></li>
             </ul>
             <div class="search-box">
-                <input type="text" placeholder="Pesquisar...">
-                <button type="button">Buscar</button>
+                <input type="text" id="searchInput" placeholder="Pesquisar..." onkeypress="handleKeyPress(event)">
+                <button type="button" onclick="performSearch()">Buscar</button>
             </div>
         </div>
     </nav>
@@ -220,6 +220,7 @@
         <p>&copy; 2025 Meu Site. Todos os direitos reservados.</p>
     </footer>
     <script src="script.js"></script>
+    <script src="search.js"></script>
 </body>
 </html>
 

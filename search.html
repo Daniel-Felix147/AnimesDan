@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados da Pesquisa - Meu Site</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <style>
+        .search-results {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .search-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .search-header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.5em;
+        }
+        
+        .search-query {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .results-count {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        
+        .result-item {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .result-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .result-title {
+            color: #333;
+            font-size: 1.5em;
+            margin: 0 0 10px 0;
+            font-weight: bold;
+        }
+        
+        .result-description {
+            color: #666;
+            line-height: 1.6;
+            margin: 0 0 15px 0;
+        }
+        
+        .result-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .result-link:hover {
+            color: #764ba2;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+        }
+        
+        .no-results i {
+            font-size: 4em;
+            color: #ddd;
+            margin-bottom: 20px;
+        }
+        
+        .search-suggestions {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .search-suggestions h3 {
+            margin: 0 0 15px 0;
+            color: #333;
+        }
+        
+        .suggestion-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .suggestion-tag {
+            background: #667eea;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: background 0.3s ease;
+        }
+        
+        .suggestion-tag:hover {
+            background: #764ba2;
+        }
+        
+        .back-to-home {
+            margin-bottom: 20px;
+        }
+        
+        .back-to-home a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .back-to-home a:hover {
+            color: #764ba2;
+        }
+    </style>
+</head>
+<body>
+    <header class="banner">
+        <img src="Banner.png" alt="Banner do site">
+        <div class="banner-content">
+            <h1><a href="index.html"><i class="fi fi-sr-world"></i></a> Bem-vindo ao Mundo dos Animes</h1>
+            <p>Sua fonte diária de conteúdo sobre anime e cultura japonesa</p>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="personagens.html">Personagens</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Pesquisar...">
+                <button type="button" onclick="performSearch()">Buscar</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="search-results">
+        <div class="back-to-home">
+            <a href="index.html"><i class="fas fa-arrow-left"></i> Voltar ao início</a>
+        </div>
+        
+        <div class="search-header">
+            <h1>Resultados da Pesquisa</h1>
+            <div class="search-query" id="searchQuery"></div>
+            <div class="results-count" id="resultsCount"></div>
+        </div>
+        
+        <div id="searchResults">
+            <!-- Os resultados serão inseridos aqui via JavaScript -->
+        </div>
+        
+        <div class="search-suggestions">
+            <h3>Sugestões de pesquisa:</h3>
+            <div class="suggestion-tags">
+                <a href="#" class="suggestion-tag" onclick="searchSuggestion('Naruto')">Naruto</a>
+                <a href="#" class="suggestion-tag" onclick="searchSuggestion('Dragon Ball')">Dragon Ball</a>
+                <a href="#" class="suggestion-tag" onclick="searchSuggestion('One Piece')">One Piece</a>
+                <a href="#" class="suggestion-tag" onclick="searchSuggestion('Attack on Titan')">Attack on Titan</a>
+                <a href="#" class="suggestion-tag" onclick="searchSuggestion('Demon Slayer')">Demon Slayer</a>
+                <a href="#" class="suggestion-tag" onclick="searchSuggestion('Jujutsu Kaisen')">Jujutsu Kaisen</a>
+                <a href="#" class="suggestion-tag" onclick="searchSuggestion('anime')">Anime</a>
+                <a href="#" class="suggestion-tag" onclick="searchSuggestion('personagens')">Personagens</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Meu Site. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="search.js"></script>
+</body>
+</html>
