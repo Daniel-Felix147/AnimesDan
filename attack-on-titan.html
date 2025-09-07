@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attack on Titan - Mundo dos Animes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header class="banner">
+        <img src="Banner.png" alt="Banner do site">
+        <div class="banner-content">
+            <h1><a href="index.html"><i class="fi fi-sr-world"></i></a> Bem-vindo ao Mundo dos Animes</h1>
+            <p>Sua fonte diária de conteúdo sobre anime e cultura japonesa</p>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="personagens.html">Personagens</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <div class="search-box">
+                <input type="text" placeholder="Pesquisar...">
+                <button type="button">Buscar</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="slideshow-container">
+        <div class="slides-wrapper">
+            <div class="slide fade">
+                <div class="slide-image-container">
+                    <img src="naruto-shipu.webp" alt="Naruto">
+                </div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Naruto Shippuden</h2>
+                    <p class="slide-description">Acompanhe a jornada de Naruto Uzumaki e seus amigos ninjas em suas aventuras para proteger a Vila da Folha e o mundo ninja. Uma história épica de amizade, perseverança e crescimento.</p>
+                </div>
+            </div>
+            <div class="slide fade">
+                <div class="slide-image-container">
+                    <img src="dragon-ball-super.jpg" alt="Dragon Ball Super">
+                </div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Dragon Ball Super</h2>
+                    <p class="slide-description">Goku e seus amigos enfrentam novos desafios em escala universal, explorando poderes divinos e lutando contra adversários cada vez mais poderosos para proteger a Terra e o universo.</p>
+                </div>
+            </div>
+            <div class="slide fade">
+                <div class="slide-image-container">
+                    <img src="one-piece.jpg" alt="One Piece">
+                </div>
+                <div class="slide-content">
+                    <h2 class="slide-title">One Piece</h2>
+                    <p class="slide-description">Embarque na aventura épica de Monkey D. Luffy e sua tripulação dos Chapéus de Palha em busca do maior tesouro do mundo, o One Piece, e do sonho de se tornar o Rei dos Piratas.</p>
+                </div>
+            </div>
+            <div class="slide fade">
+                <div class="slide-image-container">
+                    <img src="attack-on-titan.jpg" alt="Attack on Titan">
+                </div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Attack on Titan</h2>
+                    <p class="slide-description">Em um mundo onde a humanidade vive cercada por muralhas para se proteger dos Titãs, Eren Yeager e seus amigos lutam para descobrir a verdade sobre seu mundo e conquistar a liberdade.</p>
+                </div>
+            </div>
+            <div class="slide fade">
+                <div class="slide-image-container">
+                    <img src="demon-slayer.jpg" alt="Demon Slayer">
+                </div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Demon Slayer</h2>
+                    <p class="slide-description">Acompanhe a jornada de Tanjiro Kamado como um caçador de demônios, buscando uma cura para sua irmã Nezuko e enfrentando poderosos demônios em uma história emocionante de família e determinação.</p>
+                </div>
+            </div>
+            <div class="slide fade">
+                <div class="slide-image-container">
+                    <img src="jujutsu-kaisen.jpg" alt="Jujutsu Kaisen">
+                </div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Jujutsu Kaisen</h2>
+                    <p class="slide-description">Entre no mundo da feitiçaria jujutsu com Yuji Itadori, um estudante que se torna um feiticeiro para combater maldições perigosas e proteger as pessoas, enquanto lida com o poder do Rei das Maldições, Sukuna.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Botões de navegação -->
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        
+        <!-- Indicadores de posição -->
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="main-content">
+            <h1>Attack on Titan</h1>
+            <div class="anime-destaque">
+                <div class="anime-imagem">
+                    <img src="naruto-shipu.webp" alt="Attack on Titan - Arte Principal">
+                </div>
+                <div class="anime-info">
+                    <p class="anime-descricao">
+                        Naruto Shippuden continua a história de Naruto Uzumaki, agora mais velho e mais forte, 
+                        após dois anos e meio de treinamento com Jiraiya. Com novas habilidades e enfrentando 
+                        ameaças ainda maiores, Naruto continua sua jornada para se tornar Hokage e trazer 
+                        Sasuke de volta para a Vila da Folha.
+                    </p>
+                    <div class="anime-detalhes">
+                        <h2>Informações Técnicas</h2>
+                        <ul class="info-lista">
+                            <li><strong>Status:</strong> Hiato</li>
+                            <li><strong>Estúdio:</strong> Pierrot</li>
+                            <li><strong>Lançado:</strong> 2007</li>
+                            <li><strong>Duração:</strong> 23 min. por episódio</li>
+                            <li><strong>Temporada:</strong> Winter 2007</li>
+                            <li><strong>Tipo:</strong> TV</li>
+                            <li><strong>Episódios:</strong> 500</li>
+                            <li><strong>Censura:</strong> Censurado</li>
+                            <li><strong>Produtores:</strong> 
+                                <ul>
+                                    <li>Aniplex</li>
+                                    <li>KSS</li>
+                                    <li>Rakuonsha</li>
+                                    <li>Shueisha</li>
+                                    <li>TV Tokyo</li>
+                                    <li>TV Tokyo Music</li>
+                                </ul>
+                            </li>
+                            <li><strong>Elenco:</strong>
+                                <ul>
+                                    <li>Inoue, Kazuhiko</li>
+                                    <li>Ishida, Akira</li>
+                                    <li>Ishikawa, Hideo</li>
+                                    <li>Mizuki, Nana</li>
+                                    <li>Morikubo, Shoutarou</li>
+                                    <li>Nakamura, Chie</li>
+                                    <li>Ootsuka, Houchuu</li>
+                                    <li>Sugiyama, Noriaki</li>
+                                    <li>Takeuchi, Junko</li>
+                                    <li>Uchida, Naoya</li>
+                                </ul>
+                            </li>
+                            <li><strong>Postado por:</strong> RainhoUploader</li>
+                            <li><strong>Lançado em:</strong> 7 de outubro de 2024</li>
+                            <li><strong>Atualizado em:</strong> 2 de fevereiro de 2025</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="sidebar">
+            <h2>Últimas Novidades do Mundo dos Animes</h2>
+            <div class="sidebar-images">
+                <div class="sidebar-item">
+                    <a href="naruto-shippuden.html">
+                        <img src="naruto-shippuden2.jpg" alt="Naruto">
+                        <h3>Naruto Shippuden</h3>
+                        <p>Episódio mais recente</p>
+                    </a>
+                </div>
+                
+                <div class="sidebar-item">
+                    <a href="dragon-ball-super.html">
+                        <img src="dragon-ball-super2.jpg" alt="Dragon Ball">
+                        <h3>Dragon Ball Super</h3>
+                        <p>Nova temporada</p>
+                    </a>
+                </div>
+
+                <div class="sidebar-item">
+                    <a href="one-piece.html">
+                        <img src="one-piece2.jpg" alt="One Piece">
+                        <h3>One Piece</h3>
+                        <p>Últimas notícias</p>
+                    </a>
+                </div>
+
+                <div class="sidebar-item">
+                    <a href="attack-on-titan.html">
+                        <img src="attack-on-titan2.jpg" alt="Attack on Titan">
+                        <h3>Attack on Titan</h3>
+                        <p>Final da série</p>
+                    </a>
+                </div>
+
+                <div class="sidebar-item">
+                    <a href="demon-slayer.html">
+                        <img src="demon-slayer2.jpg" alt="Demon Slayer">
+                        <h3>Demon Slayer</h3>
+                        <p>Nova temporada anunciada</p>
+                    </a>
+                </div>
+
+                <div class="sidebar-item">
+                    <a href="jujutsu-kaisen.html">
+                        <img src="jujutsu-kaisen2.jpg" alt="Jujutsu Kaisen">
+                        <h3>Jujutsu Kaisen</h3>
+                        <p>Segunda temporada em exibição</p>
+                    </a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html> 

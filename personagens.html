@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personagens - Meu Site</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header class="banner">
+        <img src="Banner.png" alt="Banner do site">
+        <div class="banner-content">
+            <h1><a href="index.html"><i class="fi fi-sr-world"></i></a> Bem-vindo ao Mundo dos Animes</h1>
+            <p>Sua fonte diária de conteúdo sobre anime e cultura japonesa</p>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="personagens.html">Personagens</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <div class="search-box">
+                <input type="text" placeholder="Pesquisar...">
+                <button type="button">Buscar</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="slideshow-container">
+        <div class="slides-wrapper">
+            <div class="slide fade">
+                <div class="slide-image-container">
+                    <img src="naruto-shipu.webp" alt="Naruto">
+                </div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Naruto Shippuden</h2>
+                    <p class="slide-description">Acompanhe a jornada de Naruto Uzumaki e seus amigos ninjas em suas aventuras para proteger a Vila da Folha e o mundo ninja. Uma história épica de amizade, perseverança e crescimento.</p>
+                </div>
+            </div>
+            <div class="slide fade">
+                <div class="slide-image-container">
+                    <img src="dragon-ball-super.jpg" alt="Dragon Ball Super">
+                </div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Dragon Ball Super</h2>
+                    <p class="slide-description">Goku e seus amigos enfrentam novos desafios em escala universal, explorando poderes divinos e lutando contra adversários cada vez mais poderosos para proteger a Terra e o universo.</p>
+                </div>
+            </div>
+            <div class="slide fade">
+                <div class="slide-image-container">
+                    <img src="one-piece.jpg" alt="One Piece">
+                </div>
+                <div class="slide-content">
+                    <h2 class="slide-title">One Piece</h2>
+                    <p class="slide-description">Embarque na aventura épica de Monkey D. Luffy e sua tripulação dos Chapéus de Palha em busca do maior tesouro do mundo, o One Piece, e do sonho de se tornar o Rei dos Piratas.</p>
+                </div>
+            </div>
+            <div class="slide fade">
+                <div class="slide-image-container">
+                    <img src="attack-on-titan.jpg" alt="Attack on Titan">
+                </div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Attack on Titan</h2>
+                    <p class="slide-description">Em um mundo onde a humanidade vive cercada por muralhas para se proteger dos Titãs, Eren Yeager e seus amigos lutam para descobrir a verdade sobre seu mundo e conquistar a liberdade.</p>
+                </div>
+            </div>
+            <div class="slide fade">
+                <div class="slide-image-container">
+                    <img src="demon-slayer.jpg" alt="Demon Slayer">
+                </div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Demon Slayer</h2>
+                    <p class="slide-description">Acompanhe a jornada de Tanjiro Kamado como um caçador de demônios, buscando uma cura para sua irmã Nezuko e enfrentando poderosos demônios em uma história emocionante de família e determinação.</p>
+                </div>
+            </div>
+            <div class="slide fade">
+                <div class="slide-image-container">
+                    <img src="jujutsu-kaisen.jpg" alt="Jujutsu Kaisen">
+                </div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Jujutsu Kaisen</h2>
+                    <p class="slide-description">Entre no mundo da feitiçaria jujutsu com Yuji Itadori, um estudante que se torna um feiticeiro para combater maldições perigosas e proteger as pessoas, enquanto lida com o poder do Rei das Maldições, Sukuna.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Botões de navegação -->
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        
+        <!-- Indicadores de posição -->
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="main-content">
+            <h1>Personagens dos Nossos Animes Favoritos</h1>
+            
+            <div class="personagens-lista">
+                <h2 class="anime-section-title">Naruto</h2>
+                <article id="naruto" class="personagem-detalhes">
+                    <div class="personagem-header">
+                        <img src="naruto.jpg" alt="Naruto Uzumaki">
+                        <h2>Naruto Uzumaki</h2>
+                    </div>
+                    <div class="personagem-info">
+                        <h3>Informações Básicas</h3>
+                        <ul>
+                            <li><strong>Idade:</strong> 17 anos (Shippuden)</li>
+                            <li><strong>Aniversário:</strong> 10 de Outubro</li>
+                            <li><strong>Aldeia:</strong> Vila da Folha</li>
+                            <li><strong>Classificação:</strong> Jinchuuriki, Ninja</li>
+                        </ul>
+
+                        <h3>História</h3>
+                        <p>Naruto Uzumaki é o protagonista da série. Órfão desde o nascimento, ele cresceu sozinho e incompreendido pela vila devido ao fato de ter a Raposa de Nove Caudas selada dentro dele. Apesar das adversidades, manteve seu sonho de se tornar Hokage e ganhar o reconhecimento de todos.</p>
+
+                        <h3>Habilidades</h3>
+                        <ul>
+                            <li>Jutsu Clone das Sombras</li>
+                            <li>Rasengan e suas variações</li>
+                            <li>Modo Sábio</li>
+                            <li>Chakra da Raposa de Nove Caudas</li>
+                        </ul>
+
+                        <h3>Personalidade</h3>
+                        <p>Determinado, otimista e às vezes impulsivo, Naruto nunca desiste de seus objetivos e amigos. Sua capacidade de mudar as pessoas e fazer amizades é uma de suas características mais marcantes.</p>
+                    </div>
+                </article>
+
+                <article id="sasuke" class="personagem-detalhes">
+                    <div class="personagem-header">
+                        <img src="naruto.jpg" alt="Sasuke Uchiha">
+                        <h2>Sasuke Uchiha</h2>
+                    </div>
+                    <div class="personagem-info">
+                        <h3>Informações Básicas</h3>
+                        <ul>
+                            <li><strong>Idade:</strong> 17 anos (Shippuden)</li>
+                            <li><strong>Aniversário:</strong> 23 de Julho</li>
+                            <li><strong>Aldeia:</strong> Vila da Folha</li>
+                            <li><strong>Classificação:</strong> Ninja Renegado (temporariamente)</li>
+                        </ul>
+
+                        <h3>História</h3>
+                        <p>Último sobrevivente do clã Uchiha após o massacre causado por seu irmão Itachi. Sua busca por poder e vingança o levou a deixar a Vila da Folha, mas eventualmente retornou para proteger seus laços e a vila.</p>
+
+                        <h3>Habilidades</h3>
+                        <ul>
+                            <li>Sharingan e Mangekyou Sharingan</li>
+                            <li>Chidori e suas variações</li>
+                            <li>Técnicas de Fogo</li>
+                            <li>Susanoo</li>
+                        </ul>
+
+                        <h3>Personalidade</h3>
+                        <p>Calmo, calculista e determinado. Apesar de sua aparência fria, Sasuke possui fortes laços com seus companheiros, especialmente com Naruto e o Time 7.</p>
+                    </div>
+                </article>
+
+                <article id="sakura" class="personagem-detalhes">
+                    <div class="personagem-header">
+                        <img src="naruto.jpg" alt="Sakura Haruno">
+                        <h2>Sakura Haruno</h2>
+                    </div>
+                    <div class="personagem-info">
+                        <h3>Informações Básicas</h3>
+                        <ul>
+                            <li><strong>Idade:</strong> 17 anos (Shippuden)</li>
+                            <li><strong>Aniversário:</strong> 28 de Março</li>
+                            <li><strong>Aldeia:</strong> Vila da Folha</li>
+                            <li><strong>Classificação:</strong> Ninja Médica</li>
+                        </ul>
+
+                        <h3>História</h3>
+                        <p>Inicialmente uma kunoichi comum, Sakura se desenvolveu sob a tutela de Tsunade para se tornar uma das ninjas médicas mais habilidosas da Vila da Folha. Sua determinação e força de vontade a transformaram em uma ninja excepcional.</p>
+
+                        <h3>Habilidades</h3>
+                        <ul>
+                            <li>Força Sobre-humana</li>
+                            <li>Ninjutsu Médico Avançado</li>
+                            <li>Controle Perfeito de Chakra</li>
+                            <li>Técnicas de Cura</li>
+                        </ul>
+
+                        <h3>Personalidade</h3>
+                        <p>Inteligente, dedicada e compassiva. Sakura desenvolveu grande confiança em suas habilidades e se tornou uma ninja respeitada por seus conhecimentos médicos e força em batalha.</p>
+                    </div>
+                </article>
+
+                <h2 class="anime-section-title">Dragon Ball Super</h2>
+                <article id="goku" class="personagem-detalhes">
+                    <div class="personagem-header">
+                        <img src="dragon-ball-super.jpg" alt="Goku">
+                        <h2>Son Goku</h2>
+                    </div>
+                    <div class="personagem-info">
+                        <h3>Informações Básicas</h3>
+                        <ul>
+                            <li><strong>Raça:</strong> Saiyajin</li>
+                            <li><strong>Origem:</strong> Planeta Vegeta</li>
+                            <li><strong>Ocupação:</strong> Guerreiro Z</li>
+                            <li><strong>Família:</strong> Chi-Chi (esposa), Gohan e Goten (filhos)</li>
+                        </ul>
+
+                        <h3>História</h3>
+                        <p>Goku é um guerreiro Saiyajin criado na Terra. Desde criança, ele treina artes marciais e busca se tornar cada vez mais forte. Sua natureza alegre e seu amor por lutas o levaram a se tornar o maior defensor da Terra.</p>
+
+                        <h3>Habilidades</h3>
+                        <ul>
+                            <li>Super Saiyajin (várias formas)</li>
+                            <li>Kamehameha</li>
+                            <li>Instinto Superior</li>
+                            <li>Teletransporte</li>
+                        </ul>
+
+                        <h3>Personalidade</h3>
+                        <p>Alegre, inocente e determinado. Goku ama desafios e sempre busca se superar, protegendo a Terra e seus amigos com sua força extraordinária.</p>
+                    </div>
+                </article>
+
+                <h2 class="anime-section-title">One Piece</h2>
+                <article id="luffy" class="personagem-detalhes">
+                    <div class="personagem-header">
+                        <img src="one-piece.jpg" alt="Monkey D. Luffy">
+                        <h2>Monkey D. Luffy</h2>
+                    </div>
+                    <div class="personagem-info">
+                        <h3>Informações Básicas</h3>
+                        <ul>
+                            <li><strong>Idade:</strong> 19 anos</li>
+                            <li><strong>Alcunha:</strong> Chapéu de Palha</li>
+                            <li><strong>Recompensa:</strong> 3.000.000.000 de Berries</li>
+                            <li><strong>Posição:</strong> Capitão dos Piratas do Chapéu de Palha</li>
+                        </ul>
+
+                        <h3>História</h3>
+                        <p>Luffy é um jovem pirata que sonha em se tornar o Rei dos Piratas. Após comer a Fruta Gomu Gomu, seu corpo ganhou propriedades de borracha. Ele reúne uma tripulação leal e navega pelos mares em busca do One Piece.</p>
+
+                        <h3>Habilidades</h3>
+                        <ul>
+                            <li>Poderes da Fruta Gomu Gomu</li>
+                            <li>Gear Second, Third, Fourth e Fifth</li>
+                            <li>Haki do Rei</li>
+                            <li>Haki da Armadura</li>
+                        </ul>
+
+                        <h3>Personalidade</h3>
+                        <p>Despreocupado, leal e determinado. Luffy valoriza muito a amizade e a liberdade, sempre protegendo seus companheiros e lutando pelo que acredita.</p>
+                    </div>
+                </article>
+
+                <h2 class="anime-section-title">Attack on Titan</h2>
+                <article id="eren" class="personagem-detalhes">
+                    <div class="personagem-header">
+                        <img src="attack-on-titan.jpg" alt="Eren Yeager">
+                        <h2>Eren Yeager</h2>
+                    </div>
+                    <div class="personagem-info">
+                        <h3>Informações Básicas</h3>
+                        <ul>
+                            <li><strong>Idade:</strong> 19 anos</li>
+                            <li><strong>Origem:</strong> Shiganshina</li>
+                            <li><strong>Afiliação:</strong> Tropa de Exploração</li>
+                            <li><strong>Titã:</strong> Titã de Ataque</li>
+                        </ul>
+
+                        <h3>História</h3>
+                        <p>Após testemunhar a queda de sua cidade natal e a morte de sua mãe pelos titãs, Eren jurou eliminar todos os titãs do mundo. Sua jornada o leva a descobertas surpreendentes sobre a verdadeira natureza do mundo em que vive.</p>
+
+                        <h3>Habilidades</h3>
+                        <ul>
+                            <li>Transformação em Titã</li>
+                            <li>Endurecimento</li>
+                            <li>Controle de Titãs</li>
+                            <li>Equipamento de Manobra 3D</li>
+                        </ul>
+
+                        <h3>Personalidade</h3>
+                        <p>Determinado, intenso e focado em seus objetivos. A busca de Eren por liberdade e verdade o leva por um caminho complexo e controverso.</p>
+                    </div>
+                </article>
+
+                <h2 class="anime-section-title">Demon Slayer</h2>
+                <article id="tanjiro" class="personagem-detalhes">
+                    <div class="personagem-header">
+                        <img src="demon-slayer.jpg" alt="Tanjiro Kamado">
+                        <h2>Tanjiro Kamado</h2>
+                    </div>
+                    <div class="personagem-info">
+                        <h3>Informações Básicas</h3>
+                        <ul>
+                            <li><strong>Idade:</strong> 15 anos</li>
+                            <li><strong>Ocupação:</strong> Caçador de Demônios</li>
+                            <li><strong>Respiração:</strong> Água/Sol</li>
+                            <li><strong>Família:</strong> Nezuko (irmã)</li>
+                        </ul>
+
+                        <h3>História</h3>
+                        <p>Após sua família ser massacrada por demônios e sua irmã Nezuko ser transformada em um, Tanjiro se torna um caçador de demônios para proteger sua irmã e impedir que outras famílias sofram o mesmo destino.</p>
+
+                        <h3>Habilidades</h3>
+                        <ul>
+                            <li>Respiração da Água</li>
+                            <li>Respiração do Sol</li>
+                            <li>Olfato Aguçado</li>
+                            <li>Marca do Caçador de Demônios</li>
+                        </ul>
+
+                        <h3>Personalidade</h3>
+                        <p>Gentil, determinado e compassivo. Tanjiro mantém sua humanidade mesmo enfrentando demônios, sempre buscando entender a dor dos outros.</p>
+                    </div>
+                </article>
+
+                <h2 class="anime-section-title">Jujutsu Kaisen</h2>
+                <article id="yuji" class="personagem-detalhes">
+                    <div class="personagem-header">
+                        <img src="jujutsu-kaisen.jpg" alt="Yuji Itadori">
+                        <h2>Yuji Itadori</h2>
+                    </div>
+                    <div class="personagem-info">
+                        <h3>Informações Básicas</h3>
+                        <ul>
+                            <li><strong>Idade:</strong> 15 anos</li>
+                            <li><strong>Escola:</strong> Colégio Técnico de Feitiçaria de Tóquio</li>
+                            <li><strong>Grau:</strong> 1º ano</li>
+                            <li><strong>Recipiente:</strong> Sukuna</li>
+                        </ul>
+
+                        <h3>História</h3>
+                        <p>Um estudante do ensino médio com habilidades físicas extraordinárias que se vê envolvido no mundo da feitiçaria após ingerir um dedo amaldiçoado de Sukuna. Agora ele luta para proteger as pessoas das maldições.</p>
+
+                        <h3>Habilidades</h3>
+                        <ul>
+                            <li>Força Física Sobre-humana</li>
+                            <li>Energia Amaldiçoada</li>
+                            <li>Técnica de Divergência</li>
+                            <li>Poderes de Sukuna</li>
+                        </ul>
+
+                        <h3>Personalidade</h3>
+                        <p>Otimista, compassivo e determinado. Yuji valoriza a vida humana e luta para garantir que as pessoas tenham uma "morte apropriada".</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <aside class="sidebar">
+            <h2>Últimas Novidades do Mundo dos Animes</h2>
+            <div class="sidebar-images">
+                <div class="sidebar-item">
+                    <a href="naruto-shippuden.html">
+                        <img src="naruto-shippuden2.jpg" alt="Naruto">
+                        <h3>Naruto Shippuden</h3>
+                        <p>Episódio mais recente</p>
+                    </a>
+                </div>
+                
+                <div class="sidebar-item">
+                    <a href="dragon-ball-super.html">
+                        <img src="dragon-ball-super2.jpg" alt="Dragon Ball">
+                        <h3>Dragon Ball Super</h3>
+                        <p>Nova temporada</p>
+                    </a>
+                </div>
+
+                <div class="sidebar-item">
+                    <a href="one-piece.html">
+                        <img src="one-piece2.jpg" alt="One Piece">
+                        <h3>One Piece</h3>
+                        <p>Últimas notícias</p>
+                    </a>
+                </div>
+
+                <div class="sidebar-item">
+                    <a href="attack-on-titan.html">
+                        <img src="attack-on-titan2.jpg" alt="Attack on Titan">
+                        <h3>Attack on Titan</h3>
+                        <p>Final da série</p>
+                    </a>
+                </div>
+
+                <div class="sidebar-item">
+                    <a href="demon-slayer.html">
+                        <img src="demon-slayer2.jpg" alt="Demon Slayer">
+                        <h3>Demon Slayer</h3>
+                        <p>Nova temporada anunciada</p>
+                    </a>
+                </div>
+
+                <div class="sidebar-item">
+                    <a href="jujutsu-kaisen.html">
+                        <img src="jujutsu-kaisen2.jpg" alt="Jujutsu Kaisen">
+                        <h3>Jujutsu Kaisen</h3>
+                        <p>Segunda temporada em exibição</p>
+                    </a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html> 

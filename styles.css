@@ -1,0 +1,1116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+/* Estilo do Banner */
+.banner {
+    position: relative;
+    height: 196px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    width: 100%;
+    padding: 0 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner h1 i {
+    margin-right: 15px;
+    color: #fff;
+    font-size: 6rem;
+    transition: transform 0.3s ease;
+}
+
+.banner h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.banner h1 a:hover i {
+    transform: scale(1.1);
+}
+
+.banner p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Estilo da barra de navegação */
+.navbar {
+    background-color: #333;
+    padding: 1rem;
+}
+
+.navbar .nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #ddd;
+}
+
+/* Estilo do campo de pesquisa */
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.search-box input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    width: 200px;
+}
+
+.search-box button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.search-box button:hover {
+    background-color: #666;
+}
+
+/* Layout principal */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    gap: 2rem;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Conteúdo principal */
+.main-content {
+    flex: 2;
+    background-color: #333333;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+/* Grid de imagens */
+.grid-imagens {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+/* Estilo da div com imagem */
+.imagem-destaque {
+    margin: 0;
+    text-align: center;
+    transition: transform 0.3s ease;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    padding-bottom: 1rem;
+}
+
+.imagem-destaque a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.imagem-destaque:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.imagem-destaque img {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+}
+
+.titulo-imagem {
+    margin: 1rem 0 0.5rem;
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+}
+
+.descricao-imagem {
+    color: #b0b0b0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    padding: 0 1rem;
+    margin: 0;
+    text-align: justify;
+}
+
+/* Formulário de Contato */
+.formulario-contato {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-grupo {
+    margin-bottom: 1.5rem;
+}
+
+.form-grupo label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-grupo input,
+.form-grupo textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-grupo textarea {
+    resize: vertical;
+}
+
+.btn-enviar {
+    background-color: #333;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #555;
+}
+
+/* Informações de Contato */
+.info-contato {
+    padding: 20px;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.info-contato p {
+    margin: 10px 0;
+    color: #1a1a1a; /* Texto mais escuro */
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.info-contato strong {
+    color: #000000; /* Texto em negrito ainda mais escuro */
+    font-weight: 600;
+}
+
+/* Estilos para a barra lateral com imagens */
+.sidebar-images {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.sidebar-item {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.sidebar-item:hover {
+    transform: translateY(-5px);
+}
+
+.sidebar-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.sidebar-item h3 {
+    padding: 0.8rem;
+    margin: 0;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.sidebar-item p {
+    padding: 0 0.8rem 0.8rem;
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.sidebar-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Barra lateral */
+.sidebar {
+    flex: 1;
+    background-color: #333333;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.sidebar h2 {
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    /* Container principal */
+    .container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    /* Navbar */
+    .navbar .nav-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    /* Search box */
+    .search-box {
+        width: 100%;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .search-box input {
+        width: 100%;
+        max-width: none;
+    }
+
+    /* Banner */
+    .banner {
+        height: 150px;
+    }
+
+    .banner h1 {
+        font-size: 1.8rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+
+    /* Grid de imagens */
+    .grid-imagens {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .imagem-destaque {
+        margin: 0;
+    }
+
+    .imagem-destaque img {
+        height: 300px;
+    }
+
+    /* Slideshow */
+    .slideshow-container {
+        margin: 10px auto;
+    }
+
+    .slide {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .slide-image-container,
+    .slide-content {
+        flex: 0 0 100%;
+    }
+
+    .slide img {
+        height: 200px;
+    }
+
+    .slide-content {
+        padding: 15px 0;
+    }
+
+    .slide-title {
+        font-size: 1.3rem;
+    }
+
+    .slide-description {
+        font-size: 0.9rem;
+        -webkit-line-clamp: 4;
+    }
+
+    /* Botões de navegação do slideshow */
+    .prev, .next {
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        padding: 1rem;
+    }
+
+    .sidebar-item img {
+        height: 120px;
+    }
+
+    /* Footer */
+    .footer {
+        position: relative;
+        padding: 1rem;
+    }
+
+    /* Formulário de contato */
+    .formulario-contato {
+        padding: 1rem;
+    }
+
+    .form-grupo input,
+    .form-grupo textarea {
+        font-size: 16px;
+        padding: 0.6rem;
+    }
+
+    /* Página de personagens */
+    .personagem-header img {
+        height: 200px;
+    }
+
+    .personagem-info {
+        padding: 1rem;
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 480px) {
+    .banner h1 {
+        font-size: 1.5rem;
+    }
+
+    .banner p {
+        font-size: 0.9rem;
+    }
+
+    .imagem-destaque img {
+        height: 250px;
+    }
+
+    .titulo-imagem {
+        font-size: 1.1rem;
+    }
+
+    .descricao-imagem {
+        font-size: 0.85rem;
+    }
+
+    .slide-title {
+        font-size: 1.2rem;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box button {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+}
+
+/* Estilos da página Sobre */
+.sobre-content {
+    background-color: #333333;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.sobre-texto h2 {
+    color: #ffffff;
+    margin: 1.5rem 0 1rem;
+    font-size: 1.8rem;
+}
+
+.sobre-texto h2:first-child {
+    margin-top: 0;
+}
+
+.sobre-texto p {
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.valores-lista {
+    list-style: none;
+    margin: 1.5rem 0;
+    color: #ffffff;
+}
+
+.valores-lista li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 1.1rem;
+}
+
+.valores-lista li:before {
+    content: "•";
+    color: #ffffff;
+    position: absolute;
+    left: 0;
+}
+
+.sobre-destaque {
+    background-color: #3a3a3a;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sobre-destaque h3 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+.sobre-destaque p {
+    color: #ffffff;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* Estilos para as estatísticas na sidebar */
+.estatisticas {
+    background-color: #3a3a3a;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.estatisticas p {
+    color: #ffffff;
+    margin: 0.8rem 0;
+    font-size: 1.1rem;
+}
+
+.estatisticas strong {
+    color: #ffffff;
+    font-size: 1.3rem;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+/* Estilos da página de personagens */
+.personagens-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.personagem-detalhes {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.personagem-header {
+    position: relative;
+    width: 100%;
+}
+
+.personagem-header img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.personagem-header h2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 1rem;
+    margin: 0;
+}
+
+.personagem-info {
+    padding: 2rem;
+}
+
+.personagem-info h3 {
+    color: #333;
+    margin: 1.5rem 0 1rem;
+    font-size: 1.2rem;
+}
+
+.personagem-info h3:first-child {
+    margin-top: 0;
+}
+
+.personagem-info p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.personagem-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.personagem-info ul li {
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+/* Navegação rápida na sidebar */
+.personagens-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.personagens-nav li {
+    margin-bottom: 0.8rem;
+}
+
+.personagens-nav a {
+    color: #333;
+    text-decoration: none;
+    padding: 0.5rem;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.personagens-nav a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1200px;
+    position: relative;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+/* Slides wrapper */
+.slides-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* Slides */
+.slide {
+    flex: 0 0 50%;
+    position: relative;
+    padding: 0 15px;
+    display: flex;
+    gap: 20px;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.slide-image-container {
+    flex: 0 0 60%;
+}
+
+.slide img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.slide-content {
+    flex: 0 0 40%;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-title {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+
+.slide-description {
+    color: #b0b0b0;
+    line-height: 1.6;
+    font-size: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 2;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.9);
+}
+
+/* Dots/bullets/indicators */
+.dots {
+    text-align: center;
+    padding: 10px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* Responsividade do slideshow */
+@media (max-width: 768px) {
+    .slide {
+        flex-direction: column;
+    }
+
+    .slide-image-container,
+    .slide-content {
+        flex: 0 0 100%;
+    }
+
+    .slide img {
+        height: 250px;
+    }
+
+    .slide-content {
+        padding: 15px 0;
+    }
+}
+
+/* Estilos para a página de anime específico */
+.anime-destaque {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.anime-imagem {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.anime-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.anime-imagem img:hover {
+    transform: scale(1.05);
+}
+
+.anime-info {
+    padding: 2rem;
+}
+
+.anime-descricao {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Responsividade para a página de anime */
+@media (max-width: 768px) {
+    .anime-imagem {
+        height: 300px;
+    }
+
+    .anime-info {
+        padding: 1.5rem;
+    }
+
+    .anime-descricao {
+        font-size: 1rem;
+    }
+}
+
+.anime-detalhes {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #444;
+}
+
+.anime-detalhes h2 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-lista {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem 2rem;
+}
+
+.info-lista li {
+    margin-bottom: 0.3rem;
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Itens que devem ocupar toda a largura */
+.info-lista li:nth-child(8),
+.info-lista li:nth-child(9) {
+    grid-column: 1 / -1;
+}
+
+.info-lista strong {
+    color: #fff;
+    margin-right: 0.5rem;
+    display: inline-block;
+    min-width: 120px;
+    flex-shrink: 0;
+}
+
+.info-lista ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.2rem;
+    columns: 2;
+}
+
+.info-lista ul li {
+    margin-bottom: 0.2rem;
+    font-size: 1rem;
+    color: #b0b0b0;
+    break-inside: avoid;
+    padding-right: 1rem;
+}
+
+@media (max-width: 768px) {
+    .info-lista {
+        grid-template-columns: 1fr;
+        gap: 0.3rem;
+    }
+
+    .info-lista li:nth-child(8),
+    .info-lista li:nth-child(9) {
+        grid-column: auto;
+    }
+
+    .info-lista ul {
+        columns: 1;
+    }
+
+    .anime-detalhes {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+    }
+
+    .anime-detalhes h2 {
+        font-size: 1.3rem;
+    }
+
+    .info-lista li {
+        font-size: 1rem;
+    }
+
+    .info-lista ul li {
+        font-size: 0.9rem;
+    }
+}
+
+.main-content h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-shadow: none;
+}
+
+.anime-section-title {
+    color: #ffffff;
+    font-size: 2rem;
+    margin: 2.5rem 0 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #444;
+    text-align: center;
+}
+
+.anime-section-title:first-child {
+    margin-top: 0;
+}
+
+.personagens-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.personagem-detalhes {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.personagem-detalhes:hover {
+    transform: translateY(-5px);
+}
+
+.personagem-header {
+    position: relative;
+    width: 100%;
+}
+
+.personagem-header img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.personagem-header h2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 1.5rem;
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.personagem-info {
+    padding: 2rem;
+}
+
+.personagem-info h3 {
+    color: #ffffff;
+    margin: 1.5rem 0 1rem;
+    font-size: 1.4rem;
+}
+
+.personagem-info h3:first-child {
+    margin-top: 0;
+}
+
+.personagem-info p {
+    color: #e0e0e0;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.personagem-info ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.personagem-info ul li {
+    color: #e0e0e0;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.personagem-info ul li strong {
+    color: #ffffff;
+    margin-right: 0.5rem;
+    display: inline-block;
+    min-width: 100px;
+}
+
+@media (max-width: 768px) {
+    .anime-section-title {
+        font-size: 1.8rem;
+        margin: 2rem 0 1rem;
+    }
+
+    .personagem-header img {
+        height: 200px;
+    }
+
+    .personagem-header h2 {
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .personagem-info {
+        padding: 1.5rem;
+    }
+
+    .personagem-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .personagem-info ul li strong {
+        min-width: 80px;
+    }
+} 

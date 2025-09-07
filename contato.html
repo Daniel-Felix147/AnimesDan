@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Meu Site</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+</head>
+<body>
+    <header class="banner">
+        <img src="Banner.png" alt="Banner do site">
+        <div class="banner-content">
+            <h1><a href="index.html"><i class="fi fi-sr-world"></i></a> Bem-vindo ao Mundo dos Animes</h1>
+            <p>Sua fonte diária de conteúdo sobre anime e cultura japonesa</p>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="personagens.html">Personagens</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <div class="search-box">
+                <input type="text" placeholder="Pesquisar...">
+                <button type="button">Buscar</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="main-content">
+            <h1>Entre em Contato</h1>
+            
+            <div class="formulario-contato">
+                <form action="#" method="POST">
+                    <div class="form-grupo">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="assunto">Assunto:</label>
+                        <input type="text" id="assunto" name="assunto" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+
+        <aside class="sidebar">
+            <h2>Informações de Contato</h2>
+            <div class="info-contato">
+                <p><strong>Endereço:</strong> Rua Exemplo, 123</p>
+                <p><strong>Telefone:</strong> (11) 1234-5678</p>
+                <p><strong>Email:</strong> contato@exemplo.com</p>
+                <p><strong>Horário:</strong> Segunda a Sexta, 9h às 18h</p>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html> 
